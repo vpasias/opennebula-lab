@@ -4,7 +4,7 @@ Start an self contained OpenNebula LAB with 2 compute nodes and a frontend node 
 
 Status:
 
-- OpenNebula: 6.1 CE
+- OpenNebula: 6.4 CE
 - Debian 11 (frontend and nodes)
 
 ## Requirements
