@@ -33,8 +33,8 @@ Vagrant.configure("2") do |config|
   # controller / frontend
   config.vm.define :frontend do |box|
     box.vm.provider :virtualbox do |vb|
-      vb.memory = 3048
-      vb.cpus = 3
+      vb.memory = 16384
+      vb.cpus = 4
     end
     box.vm.host_name = "frontend"
     box.vm.network "forwarded_port", guest: 80, host: 8080
@@ -66,8 +66,8 @@ Vagrant.configure("2") do |config|
     hostname = computeNodes[key]['hostname']
     config.vm.define hostname do |box|
       box.vm.provider :virtualbox do |vb|
-        vb.memory = 2048
-        vb.cpus = 2
+        vb.memory = 16384
+        vb.cpus = 4
         vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
       end
       box.vm.host_name = hostname
